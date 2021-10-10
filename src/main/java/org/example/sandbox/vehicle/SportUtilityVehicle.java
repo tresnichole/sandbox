@@ -21,5 +21,9 @@ public abstract class SportUtilityVehicle extends LandCraft{
         sb.append('}');
         return sb.toString();
     }
+
+    public abstract void engage4WD();
+
+    public abstract void disengage4WD();
 }
 
