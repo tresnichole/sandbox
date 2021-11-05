@@ -231,9 +231,9 @@ public class BinaryTree<T> implements Tree<T> {
     private void inOrder(BinaryTreeNode<T> node, Queue<T> tempList) {
         // Left Root Right
         if(node != null){
-            preOrder(node.getLeft(), tempList);
+            inOrder(node.getLeft(), tempList);
             tempList.add(node.getElement());
-            preOrder(node.getRight(), tempList);
+            inOrder(node.getRight(), tempList);
 
         }
     }
@@ -250,8 +250,8 @@ public class BinaryTree<T> implements Tree<T> {
     private void postOrder(BinaryTreeNode<T> node, Queue<T> tempList) {
         // Left Root Right
         if(node != null){
-            preOrder(node.getLeft(), tempList);
-            preOrder(node.getRight(), tempList);
+            postOrder(node.getLeft(), tempList);
+            postOrder(node.getRight(), tempList);
             tempList.add(node.getElement());
 
         }
